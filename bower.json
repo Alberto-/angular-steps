@@ -7,7 +7,7 @@
   "private": true,
   "dependencies": {
     "angular": "1.5.8",
-   "angular-animate":  "1.5.8"
-
+   "angular-animate":  "1.5.8",
+    "bootstrap": "3.1.1"
  }
 }
