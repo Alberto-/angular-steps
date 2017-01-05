@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Angular steps</title>
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+	<!-- JS Libs inclusions -->
+	<script type="text/javascript" src="assets/bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="assets/bower_components/angular-animate/angular-animate.min.js"></script>
+
+	<!-- element app -->
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="services/service.js"></script>
+	<script type="text/javascript" src="controllers/registrationController.js"></script>
+	<script type="text/javascript" src="controllers/step1Controller.js"></script>
+	<script type="text/javascript" src="controllers/step2Controller.js"></script>
+	<script type="text/javascript" src="controllers/step3Controller.js"></script>
+	<script type="text/javascript" src="controllers/step4Controller.js"></script>
+	<link rel="stylesheet" href="app.css">
+
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<h1 class="appTitle">Angular-Steps Demo</h1>
+	<div id="stepsApp"  ng-app="stepsApp" >
+	<div ng-controller="stepsController">
+		<div class="reg-header">
+		<h3 class="appSubTitle">Try this registration wizard</h3>
+		</div>
+
+		<div class="col-md-12 col-sm-12 main-app-content section-spacer no-padding ">
+			<div  class="">
+
+				<div class="reg-main-content" >
+
+					<div id="appSteps" class="col-md-6 col-md-offset-3">
+						<button class="item-step" ng-click="moveToStep(1)" ng-class="{'step-active' : currentStep === 1}" ng-disabled="!reg.steps[1]">1</button>
+						<button class="item-step" ng-click="moveToStep(2)" ng-class="{'step-active' : currentStep === 2}" ng-disabled="!reg.steps[2]">2</button>
+						<button class="item-step" ng-click="moveToStep(3)" ng-class="{'step-active' : currentStep === 3}" ng-disabled="!reg.steps[3]">3</button>
+						<button class="item-step" ng-click="moveToStep(4)" ng-class="{'step-active' : currentStep === 4}" ng-disabled="!reg.steps[4]">4</button>
+						<button class="item-step" ng-click="moveToStep(5)" ng-class="{'step-active' : currentStep === 5}" ng-disabled="!reg.steps[5]">5</button>
+					</div>
+
+					<!---Current Step: {{currentStep}}--->
+					<div ng-switch="currentSelected" class="col-md-12" id="currentView" >
+						<div ng-switch-when="1" class="default-view">
+							<step1></step1>
+						</div>
+						<div ng-switch-when="2" class="default-view bg-white">
+							<step2></step2>
+						</div>
+						<div ng-switch-when="3" class="default-view bg-white">
+							<step3></step3>
+						</div>
+						<div ng-switch-when="4" class="default-view bg-white">
+							<step4></step4>
+						</div>
+						<div ng-switch-when="5" class="default-view  bg-white">
+							<step5></step5>
+						</div>
+						<div ng-switch-default>
+							<step1></step1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+</body>
+</html>
+
