@@ -468,18 +468,12 @@ step3{
 
 
 .step-content .block-title{
-    /*    position: absolute;
-        font-size: 1.6em;
-        background: #ffffff;
-        line-height: 1.1em;
-        top: -1.1em;
-        padding: 0 1em;
-        left: 2em;*/
     position: absolute;
     font-size: 1.6em;
     background: #ffffff;
     line-height: 1.1em;
-    top: -1.1em;
+    /*top: -1.1em;*/
+    top: -24px;
     left: 0.5em;
 }
 
