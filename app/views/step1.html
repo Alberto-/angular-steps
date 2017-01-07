@@ -1,112 +1,109 @@
 <div class="col-md-6 col-md-offset-3 no-padding">
-<form name="formStep1" class="" novalidate ng-submit="checkStep1()">
-    
+    <form name="formStep1" class="" novalidate ng-submit="checkStep1()">
+
         <div class="form-group row" ng-class="{'has-error': formStep1.reg_username.$error.pattern }">
-        <label for="reg_username" class="col-sm-2 control-label">Name</label>
-        <div class="col-sm-10">
-            <input class="form-control" id="reg_username" placeholder=""  type="text" ng-minlength="3" ng-maxlength="15" ng-pattern="namePattern" name="reg_username" ng-model="reg.user.firstName"  required />
-            <div ng-show="formStep1.$submitted || formStep1.reg_username.$touched">
-                <div ng-show="formStep1.reg_username.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
-                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error</span>
-                    Insert Username.
-                </div>
-                <div ng-show="formStep1.reg_username.$error.pattern" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
-                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error</span>
-                    Username not valid
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    <div class="form-group row" ng-class="{'has-error': formStep1.reg_surname.$error.pattern }">
-        <label for="reg_surname" class="col-sm-2 control-label">Surname</label>
-        <div class="col-sm-10">
-            <input class="form-control" id="reg_surname" placeholder=""  type="text" ng-minlength="3" ng-maxlength="15" ng-pattern="namePattern" name="reg_surname" ng-model="reg.user.lastName"  required />
-            <div ng-show="formStep1.$submitted || formStep1.reg_surname.$touched">
-                <div ng-show="formStep1.reg_surname.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
-                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error</span>
-                    Insert Surname.
-                </div>
-                <div ng-show="formStep1.reg_surname.$error.pattern" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
-                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error</span>
-                    Surname not valid
+            <label for="reg_username" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="reg_username" placeholder=""  type="text" ng-minlength="3" ng-maxlength="15" ng-pattern="namePattern" name="reg_username" ng-model="reg.user.firstName"  required />
+                <div ng-show="formStep1.$submitted || formStep1.reg_username.$touched">
+                    <div ng-show="formStep1.reg_username.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error</span>
+                        Insert Username.
+                    </div>
+                    <div ng-show="formStep1.reg_username.$error.pattern" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error</span>
+                        Username not valid
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <div class="form-group row" ng-class="{'has-error': formStep1.reg_surname.$error.pattern }">
+            <label for="reg_surname" class="col-sm-2 control-label">Surname</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="reg_surname" placeholder=""  type="text" ng-minlength="3" ng-maxlength="15" ng-pattern="namePattern" name="reg_surname" ng-model="reg.user.lastName"  required />
+                <div ng-show="formStep1.$submitted || formStep1.reg_surname.$touched">
+                    <div ng-show="formStep1.reg_surname.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error</span>
+                        Insert Surname.
+                    </div>
+                    <div ng-show="formStep1.reg_surname.$error.pattern" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error</span>
+                        Surname not valid
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-    <div class="form-group row">
-        <label for="genderContainer" class="col-sm-2 control-label">Gender</label>
-        <div class="col-sm-10">
-            <div id="genderContainer" class="col-md-6 gender-container form-group">
-                <label class="left">
-                    <input id="genderMale" type="radio" ng-model="reg.user.gender" value="mal" required>
-                    Male
-                </label>
-                <label  class="right">
-                    <input id="genderFemale" type="radio" ng-model="reg.user.gender" value="fem" required>
-                    Female
-                </label>
+        <div class="form-group row">
+            <label for="genderContainer" class="col-sm-2 control-label">Gender</label>
+            <div class="col-sm-10">
+                <div id="genderContainer" class="col-md-6 gender-container form-group">
+                    <label class="left">
+                        <input id="genderMale" type="radio" ng-model="reg.user.gender" value="mal" required>
+                        Male
+                    </label>
+                    <label  class="right">
+                        <input id="genderFemale" type="radio" ng-model="reg.user.gender" value="fem" required>
+                        Female
+                    </label>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="form-group row" ng-class="{'has-error': formStep1.reg_email.$error.pattern }">
-        <label for="reg_email" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-10">
-            <input class="form-control" id="reg_email" placeholder=""  type="text" ng-pattern="emailPattern" name="reg_email" ng-model="reg.reg_email"  required />
-            <div ng-show="formStep1.$submitted || formStep1.reg_email.$touched">
-                <div ng-show="formStep1.reg_email.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
-                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error</span>
-                    Insert Email.
-                </div>
-                <div ng-show="formStep1.reg_email.$error.pattern" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
-                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    <span class="sr-only">Error</span>
-                    Email not valid
+        <div class="form-group row" ng-class="{'has-error': formStep1.reg_email.$error.pattern }">
+            <label for="reg_email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="reg_email" placeholder=""  type="text" ng-pattern="emailPattern" name="reg_email" ng-model="reg.reg_email"  required />
+                <div ng-show="formStep1.$submitted || formStep1.reg_email.$touched">
+                    <div ng-show="formStep1.reg_email.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error</span>
+                        Insert Email.
+                    </div>
+                    <div ng-show="formStep1.reg_email.$error.pattern" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error</span>
+                        Email not valid
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    
-    <div class="form-group row">
-        <div class="col-md-offset-2 col-sm-10">
-            <input id="reg_pet" type="checkbox" ng-model="reg.user.havePet"/>
-            <label for="reg_pet">I've a pet</label>
-        </div>
-        <div class="col-md-12 company-box ng-hide no-padding" ng-show="reg.user.havePet">
-            <div class="form-group row" ng-class="{'has-error': formStep1.reg_pet_name.$error.pattern }">
-                <label for="reg_pet_name" class="col-sm-2 control-label">Pet's Name</label>
-                <div class="col-sm-10">
-                    <input class="form-control" id="reg_pet_name" placeholder=""  type="text" ng-minlength="3" ng-maxlength="15" ng-pattern="namePattern" name="reg_pet_name" ng-model="reg.user.societa.name"   ng-required="reg.user.haveBusiness" />
-                    <div ng-show="formStep1.$submitted || formStep1.reg_pet_name.$touched">
-                        <div ng-show="formStep1.reg_pet_name.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
-                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                            <span class="sr-only">Error</span>
-                            Insert Pet's Name
-                        </div>
-                        <div ng-show="formStep1.reg_pet_name.$error.pattern" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
-                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                            <span class="sr-only">Error</span>
-                            Pet's Name not valid
+
+        <div class="form-group row">
+            <div class="col-md-offset-2 col-sm-10">
+                <input id="reg_pet" type="checkbox" ng-model="reg.user.havePet"/>
+                <label for="reg_pet">I've a pet</label>
+            </div>
+            <div class="col-md-12 company-box ng-hide no-padding" ng-show="reg.user.havePet">
+                <div class="form-group row" ng-class="{'has-error': formStep1.reg_pet_name.$error.pattern }">
+                    <label for="reg_pet_name" class="col-sm-2 control-label">Pet's Name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="reg_pet_name" placeholder=""  type="text" ng-minlength="3" ng-maxlength="15" ng-pattern="namePattern" name="reg_pet_name" ng-model="reg.user.societa.name"   ng-required="reg.user.haveBusiness" />
+                        <div ng-show="formStep1.$submitted || formStep1.reg_pet_name.$touched">
+                            <div ng-show="formStep1.reg_pet_name.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                <span class="sr-only">Error</span>
+                                Insert Pet's Name
+                            </div>
+                            <div ng-show="formStep1.reg_pet_name.$error.pattern" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                <span class="sr-only">Error</span>
+                                Pet's Name not valid
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-        </div>   
-        
-    </div>
-    
-    <div class="form-group row ">
-        <div class="col-md-offset-2 col-sm-10 ">
+        <div class="form-group row ">
+            <div class="col-md-offset-2 col-sm-10 ">
                 <input id="reg_termsConditions" type="checkbox" ng-model="reg.user.termsAndConditions" required/>
                 <label for="reg_termsConditions">Accept terms and conditions</label>
                 <div ng-show="formStep1.$submitted || formStep1.reg_termsConditions.$touched">
@@ -115,18 +112,17 @@
                         <span class="sr-only">Error</span>
                         Accept terms and condition.
                     </div>
+                </div>
             </div>
         </div>
-    </div>
-    
-    
-    <div class="form-group">
-        <div class="col-md-6 col-md-offset-3 col-sm-12 text-center next-step-container">
-            <button ng-disabled="formStep1.$invalid" type="submit" class="btn btn-next-step">Next Step &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-        </div>
-    </div>
-    
-</form>
 
- </div>
+        <div class="form-group">
+            <div class="col-md-6 col-md-offset-3 col-sm-12 text-center next-step-container">
+                <button ng-disabled="formStep1.$invalid" type="submit" class="btn btn-next-step">Next Step &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
 
