@@ -2,10 +2,6 @@ registrationApp.controller('step1Controller',['$scope','$http','sharedService', 
 
         $scope.reg = sharedService;
         $scope.utils = staticPropertiesService;
-        $scope.isCompany = false;
-
-
-        $scope.societaPattern = $scope.utils.societaCustom;
         $scope.namePattern = $scope.utils.namePattern;
         $scope.emailPattern = $scope.utils.emailPattern;
         $scope.datePattern = $scope.utils.datePattern;
