@@ -84,7 +84,7 @@
                 <div class="form-group row" ng-class="{'has-error': formStep1.reg_pet_name.$error.pattern }">
                     <label for="reg_pet_name" class="col-sm-2 control-label">Pet's Name</label>
                     <div class="col-sm-10">
-                        <input class="form-control" id="reg_pet_name" placeholder=""  type="text" ng-minlength="3" ng-maxlength="15" ng-pattern="namePattern" name="reg_pet_name" ng-model="reg.user.societa.name"   ng-required="reg.user.havePet" />
+                        <input class="form-control" id="reg_pet_name" placeholder=""  type="text" ng-minlength="3" ng-maxlength="15" ng-pattern="namePattern" name="reg_pet_name" ng-model="reg.user.petName"   ng-required="reg.user.havePet" />
                         <div ng-show="formStep1.$submitted || formStep1.reg_pet_name.$touched">
                             <div ng-show="formStep1.reg_pet_name.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
                                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
