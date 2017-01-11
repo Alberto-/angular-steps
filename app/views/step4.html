@@ -16,11 +16,11 @@
                 <div class="step2-item">
                     <div  class="step4-item-title">{{item.description}}</div>
                     <div  class="step4-price">
-                        <div class="step4-price-amount"><span class="price">&#8364;{{item.price}}</span>&#47;mo</div>
+                        <div class="step4-price-amount margin-md-bottom"><span class="price">&#8364;{{item.price}}</span>&#47;mo</div>
                         <div class="step4-price-descr">Free 9 &dash; day trial</div>
                     </div>
                     <div class="step2-item-content">
-                        <p>Shorten your commute time and save your money by sharing the spare seats and connecting with other nice drivers and passengers for shared travel experience</p>
+                        <p>{{item.content}}</p>
                     </div>
                     <div class="step2-item-action">
                         <input id="price1" type="radio" ng-model="reg.community.priceKey" value="{{item.id}}" required>
