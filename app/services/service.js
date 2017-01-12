@@ -27,25 +27,28 @@ registrationApp.service('staticPropertiesService',['$http', function ($http) {
                 id: "uk",
                 value: "UK"
             }];
-    
-    
+
+
         var prices = [
             {
                 description:"basic",
                 price: 9,
+                content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
                 key:"basic_price",
                 id:1
             },
             {
                 description:"standard",
                 price: 25,
+                content:"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
                 key:"standard_price",
-                 id:2
+                id:2
             },
             {
                 description:"premium",
                 price: 75,
-                key:"premium_price", 
+                content:"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+                key:"premium_price",
                 id:3
                 
             }
@@ -212,7 +215,7 @@ registrationApp.factory('sharedService', ['$http', function ($http) {
 
            return $http.post(CurrentHost.getPortal() + "/yourAPIPath", json);
 
-            /** or use this for strut actions and simple form submitting **/
+            /** or use this for simple form POST submitting **/
             // return $http({
             //     method: 'POST',
             //     url: CurrentHost.getPortal() + "/yourAPIPath",
