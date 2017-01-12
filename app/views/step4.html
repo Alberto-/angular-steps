@@ -13,7 +13,7 @@
                 <div class="most-popular-container" ng-if="item.key =='standard_price'">
                     <div class="ribbon"><span>POPULAR</span></div>
                 </div>
-                <div class="step2-item">
+                <div class="step2-item shadow"  ng-class="reg.community.priceKey === item.id ? 'itemActive' : 'itemNotActive'">
                     <div  class="step4-item-title">{{item.description}}</div>
                     <div  class="step4-price">
                         <div class="step4-price-amount margin-md-bottom"><span class="price">&#8364;{{item.price}}</span>&#47;mo</div>

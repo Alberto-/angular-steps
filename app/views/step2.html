@@ -11,7 +11,7 @@
 
         <div class="col-md-4 margin-medium-top" ng-repeat="item in services">
             <a href="#" class="service-anchor" ng-click="selectService(item.id)">
-                <div class="step2-item shadow">
+                <div class="step2-item shadow"  ng-class="reg.community.serviceKey === item.id ? 'itemActive' : 'itemNotActive'">
                     <div class="step2-icon-container"><i class="material-icons step2-icons">{{item.icon}}</i></div>
                     <div class="home-card-title margin-md-bottom">{{item.description}}</div>
                     <div id="{{item.key}}" class="step2-img-text"></div>
