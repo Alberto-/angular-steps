@@ -9,9 +9,6 @@ and open the template in the editor.
 
 */
 
-
-
-
 html,
 body {
     height: 100%;
@@ -74,7 +71,6 @@ body {
     font-size: 50px;
 }
 
-
 .appSubTitle{
     font-family: 'Gloria Hallelujah', cursive;
     margin: 1em auto;
@@ -84,10 +80,6 @@ body {
 .reg-main-content{
     position: relative;
 }
-
-/*.main-app-content{
-    background: #fff;
-}*/
 
 #registrationApp{
     min-height: 500px;
@@ -111,6 +103,10 @@ body {
 
 .next-step-container{
     margin-top: 2em;
+}
+
+.margin-md-bottom{
+    margin-bottom: 1em;
 }
 
 .btn-next-step{
@@ -140,13 +136,13 @@ body {
     padding: 0.5em 1em;
     text-align: right;
 }
+
 .btn-reg-close-content button{
     border: 0;
     padding: 10px;
     background: transparent;
     outline: none;
 }
-
 
 /****** Buttons header  FLOW- Start******/
 
@@ -161,7 +157,6 @@ body {
     align-items: stretch;
     padding: 0;
 }
-
 
 #appSteps:before{
     width: 100%;
@@ -238,8 +233,6 @@ body {
     animation-name: fadeInDown;
 }
 
-
-
 .company-box {
     transition: all linear 0.5s;
 }
@@ -314,7 +307,6 @@ step1{
     position: relative;
 }
 
-
 .step2-item-action{
     text-align: center;
     font-size: 40px;
@@ -327,14 +319,10 @@ step1{
     padding: 0.2em 0;
 }
 
-
-
 .service-anchor{
     outline: none;
     position: relative;
 }
-
-
 
 .service-anchor:link,
 .service-anchor:visited,
@@ -348,7 +336,6 @@ step1{
     content: "\f058";
 }
 
-
 .step2-item-action input[type=radio] + label>i:before{
     content: "\f10c";
 }
@@ -356,8 +343,6 @@ step1{
 .step2-item-action input[type=radio]{
     display: none;
 }
-
-
 
 .step2-title{
     text-align: left;
@@ -387,8 +372,6 @@ step1{
     bottom: 50%;
     right: 0px;
 }
-
-
 
 #service1{
     height: 200px;
@@ -428,8 +411,6 @@ step1{
     color: #d7655b;
 }
 
-
-
 /*********************************************************  STEP 3 ******************************************/
 
 .imgSizePreview{
@@ -451,12 +432,10 @@ step1{
     display: inline;
 }
 
-
 step3{
     background: transparent;
     color: #000000;
 }
-
 
 .step-content{
     background: rgba(158, 158, 158, 0.18);
@@ -465,7 +444,6 @@ step3{
     margin: 3em 0;
     position: relative;
 }
-
 
 .step-content .block-title{
     position: absolute;
@@ -477,13 +455,9 @@ step3{
     left: 0.5em;
 }
 
-
 step3 .form-control, output, step3{
     background: transparent;
 }
-
-
-
 
 .step3-title{
     text-align: left;
@@ -520,11 +494,7 @@ step3 .form-control, output, step3{
     font-size: 0.8em;
 }
 
-
 /*********************************************************  STEP 4 ******************************************/
-
-
-
 .step4-item-title{
     text-align: center;
     font-size: 2em;
@@ -535,7 +505,7 @@ step3 .form-control, output, step3{
     position:relative;
     margin-bottom: 0.2em;
     display: block;
-
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 
@@ -553,10 +523,10 @@ step3 .form-control, output, step3{
     color: #000000;
 }
 
-
 .step4-price-amount{
     font-size: 2em;
     text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .step4-price-descr{
@@ -570,15 +540,12 @@ step3 .form-control, output, step3{
     font-weight: bold;
 }
 
-
-
-
-
 /*MOST POPULAR SECTION- Ribbon*/
 
 .most-popular-container {
     position: relative;
 }
+
 .most-popular-container .ribbon {
     position: absolute;
     left: -5px; top: -5px;
@@ -587,6 +554,7 @@ step3 .form-control, output, step3{
     width: 75px; height: 75px;
     text-align: right;
 }
+
 .most-popular-container .ribbon span {
     font-size: 10px;
     font-weight: bold;
@@ -604,6 +572,7 @@ step3 .form-control, output, step3{
     position: absolute;
     top: 19px; left: -21px;
 }
+
 .most-popular-container .ribbon span::before {
     content: "";
     position: absolute; left: 0px; top: 100%;
@@ -613,6 +582,7 @@ step3 .form-control, output, step3{
     border-bottom: 3px solid transparent;
     border-top: 3px solid #d7655b;
 }
+
 .most-popular-container .ribbon span::after {
     content: "";
     position: absolute; right: 0px; top: 100%;
@@ -623,13 +593,12 @@ step3 .form-control, output, step3{
     border-top: 3px solid #d7655b;
 }
 
-
-
 /*MOST POPULAR SECTION- Ribbon*/
 
 .most-popular-container2 {
     position: relative;
 }
+
 .most-popular-container2 .ribbon {
     position: absolute;
     left: 0px;
@@ -640,6 +609,7 @@ step3 .form-control, output, step3{
     height: 92px;
     text-align: right;
 }
+
 .most-popular-container2 .ribbon span {
     font-size: 10px;
     font-weight: bold;
@@ -660,7 +630,6 @@ step3 .form-control, output, step3{
     left: -34px;
 }
 
-
 /*********************************************************  STEP 5 ******************************************/
 
 .icon-service-step5{
@@ -668,13 +637,11 @@ step3 .form-control, output, step3{
     font-size: 3em;
 }
 
-
 .card-inline{
     display: inline-block;
     width: 50px;
     height: auto;
 }
-
 
 .card-title{
     display: block;
@@ -693,12 +660,10 @@ label{
     cursor: pointer;
 }
 
-
 .old-b-row{
     margin-left: -20px;
     margin-right: -20px;
 }
-
 
 #askmoreBlock{
     padding: 3em 0;
@@ -711,8 +676,6 @@ label{
     margin: 5em auto;
     text-align: center;
 }
-
-
 
 /*------------SERVICES--------------------------------*/
 
@@ -811,7 +774,6 @@ label{
     color: #d7655b;
 }
 
-
 .home-card-title{
     text-align: center;
     text-transform: uppercase;
@@ -820,18 +782,11 @@ label{
     font-weight: bold;
 }
 
-
 .home-icon{
     font-size: 1em;
 }
 
-
-
 /*--------------------------PRICING--------------------------------------*/
-
-
-
-
 
 .step4-item-title{
     text-align: center;
@@ -845,7 +800,6 @@ label{
     display: block;
 
 }
-
 
 .step4-item-title:after{
     height: 3px !important;
@@ -861,7 +815,6 @@ label{
     color: #000000;
 }
 
-
 .step4-price-amount{
     font-size: 2em;
     text-align: center;
@@ -873,18 +826,16 @@ label{
     font-size: 2em;
 }
 
-
 .step4-price-amount span.price{
     font-weight: bold;
 }
-
-
 
 /*MOST POPULAR SECTION- Ribbon*/
 
 .most-popular-container {
     position: relative;
 }
+
 .most-popular-container .ribbon {
     position: absolute;
     left: -5px; top: -5px;
@@ -893,6 +844,7 @@ label{
     width: 75px; height: 75px;
     text-align: right;
 }
+
 .most-popular-container .ribbon span {
     font-size: 10px;
     font-weight: bold;
@@ -910,6 +862,7 @@ label{
     position: absolute;
     top: 19px; left: -21px;
 }
+
 .most-popular-container .ribbon span::before {
     content: "";
     position: absolute; left: 0px; top: 100%;
@@ -919,6 +872,7 @@ label{
     border-bottom: 3px solid transparent;
     border-top: 3px solid #d7655b;
 }
+
 .most-popular-container .ribbon span::after {
     content: "";
     position: absolute; right: 0px; top: 100%;
@@ -928,10 +882,6 @@ label{
     border-bottom: 3px solid transparent;
     border-top: 3px solid #d7655b;
 }
-
-
-
-
 
 /*--------------sign up section------------------------------------*/
 
@@ -948,7 +898,6 @@ label{
     margin: 5em auto;
     text-align: center;
 }
-
 
 .white-link:link,
 .white-link:visited,
@@ -978,6 +927,7 @@ label{
 .capitalize{
     text-transform: capitalize;
 }
+
 #loadingSpinner{
     position: absolute !important;
     width: 100% !important;
@@ -1006,11 +956,10 @@ label{
 .left{
     float:  left !important;
 }
+
 .right{
     float: right !important;
 }
-
-
 
 tbody>tr>td,thead>tr>th{
     text-align: center;
