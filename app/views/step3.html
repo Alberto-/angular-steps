@@ -1,15 +1,15 @@
 <div class="col-md-6 col-md-offset-3 no-padding">
     <div class="row">
         <div class="col-md-12 text-center">
-            <div class="step3-title">Community Settings</div>
+            <div class="step3-title">Blog's Settings</div>
         </div>
     </div>
     <form name="formStep3" class="" novalidate ng-submit="checkStep3()">
         
         <div class="step-content row ">
-            <div class="block-title">Community Name</div>
+            <div class="block-title">Blog Name</div>
             <div class="form-group col-md-10 col-md-offset-1">
-                <label for="reg_community_name" class="control-label">What is the name of your web community?</label>
+                <label for="reg_community_name" class="control-label">What is the name of your blog?</label>
                 <input class="form-control" id="reg_community_name" placeholder=""  type="text" ng-minlength="3" ng-maxlength="20" ng-pattern="namePattern" name="reg_community_name" ng-model="reg.community.name"  required />
                     
                 <div ng-show="formStep3.$submitted || formStep3.reg_community_name.$touched">
@@ -27,7 +27,7 @@
             </div>
                 
             <div class="form-group col-md-10 col-md-offset-1">
-                <label for="reg_community_abstract">What is the abstract of your web community?</label>
+                <label for="reg_community_abstract">What is the description of your blog?</label>
                 <textarea class="form-control" id="reg_community_abstract" ng-trim="false " maxlength="250" ng-model="reg.community.abstract" name="reg_community_abstract" placeholder="Type in your abstract"
                           rows="5"></textarea>
                 <span class="pull-right chars-remaining-pf">
@@ -38,7 +38,7 @@
             
 
         <div class="step-content row">
-            <div class="block-title">Domain</div>
+            <div class="block-title">Blog's domain</div>
             <div class="form-group col-md-10 col-md-offset-1">
                 <label for="reg_domain" class="control-label">Domain</label>
                 <div class="row">
