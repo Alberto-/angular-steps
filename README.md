@@ -1,8 +1,8 @@
 # Angular Steps
 
-Angular Steps is an example of a registration step wizard made with AngularJS (version 1.5.8).
+Angular Steps is an example of a registration step wizard made with AngularJS (version 1.5.8). [view demo]
 
-##Introduction
+## Introduction
 
 The project is composed by 5 steps.
 You can move forward to the next step if the current step is valid.
@@ -10,7 +10,9 @@ If you want, you can move back to old steps, the wizard stores data into a share
 
 The aim of the project is to create a wizard able to guide the user into a correct form filling composed by different interfaces with their own logic and layout.
 
-##Structure
+ --> [view demo] <--
+
+## Structure
 
 The App is made of a main controller that manages the logic to move from a step to another.
 
@@ -20,7 +22,6 @@ There is a Main-shared service that stores the shared data between all controlle
 
 Finally the last steps allow you to make an API call to submit all data.
 
-[view demo]
 
 ## Installation
 
