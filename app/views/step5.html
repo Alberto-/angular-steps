@@ -1,0 +1,37 @@
+<div class="col-md-6 col-md-offset-3 no-padding">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="step3-title">Payment</div>
+        </div>
+    </div>
+    <form name="formStep5" class="" novalidate ng-submit="checkStep5()">
+        
+        <div class="step-content row ">
+            <div class="block-title">Service & Price</div>
+                   <div class="row">
+                <div class="col-md-6 text-left">
+                   
+                    <div  class="step4-item-title">{{selectedService.description}}</div>
+                    <div  class="text-center icon-service-step5 ">
+                        <i class="material-icons step2-icons">{{selectedService.icon}}</i>
+                    </div>
+                </div>
+                <div class="col-md-6 text-right">
+                      <div  class="step4-item-title">{{selectedPrice.description}}</div>
+                    <div  class="step4-price">
+                        <div class="step4-price-amount"><span class="price">&#8364;{{selectedPrice.price}}</span>&#47;mo</div>
+                        <div class="step4-price-descr">Free 9 &dash; day trial</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-6 col-md-offset-3 col-sm-12 text-center next-step-container">
+                <button ng-disabled="formStep5.$invalid || isSubmitting || !selectedPrice || !selectedService" type="submit" class="btn btn-next-step">Finish <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+            
+    </form>
+        
+</div>

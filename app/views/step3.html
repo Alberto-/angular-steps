@@ -1,0 +1,107 @@
+<div class="col-md-6 col-md-offset-3 no-padding">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="step3-title">Blog's Settings</div>
+        </div>
+    </div>
+    <form name="formStep3" class="" novalidate ng-submit="checkStep3()">
+        
+        <div class="step-content row ">
+            <div class="block-title">Blog Name</div>
+            <div class="form-group col-md-10 col-md-offset-1">
+                <label for="reg_community_name" class="control-label">What is the name of your blog?</label>
+                <input class="form-control" id="reg_community_name" placeholder=""  type="text" ng-minlength="3" ng-maxlength="20" ng-pattern="namePattern" name="reg_community_name" ng-model="reg.community.name"  required />
+                    
+                <div ng-show="formStep3.$submitted || formStep3.reg_community_name.$touched">
+                    <div ng-show="formStep3.reg_community_name.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error</span>
+                        Insert Community name.
+                    </div>
+                    <div ng-show="formStep3.reg_community_name.$error.pattern" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error</span>
+                        Community name not valid
+                    </div>
+                </div>
+            </div>
+                
+            <div class="form-group col-md-10 col-md-offset-1">
+                <label for="reg_community_abstract">What is the description of your blog?</label>
+                <textarea class="form-control" id="reg_community_abstract" ng-trim="false " maxlength="250" ng-model="reg.community.abstract" name="reg_community_abstract" placeholder="Type in your abstract"
+                          rows="5"></textarea>
+                <span class="pull-right chars-remaining-pf">
+                   {{250 - reg.community.abstract.length}} left
+                </span>
+            </div>
+        </div>
+            
+
+        <div class="step-content row">
+            <div class="block-title">Blog's domain</div>
+            <div class="form-group col-md-10 col-md-offset-1">
+                <label for="reg_domain" class="control-label">Domain</label>
+                <div class="row">
+                    <input class="form-control" id="reg_domain" placeholder=""  type="text" ng-pattern="alphanumericAdvanced" name="reg_domain" ng-model="reg.community.domain"  required />&nbsp;<span id="domainEnd" class="">.angular-steps.com</span>
+                </div>
+                <div ng-show="formStep3.$submitted || formStep3.reg_domain.$touched">
+                    <div ng-show="formStep3.reg_domain.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error</span>
+                        Insert a Domain.
+                    </div>
+                    <div ng-show="formStep3.reg_domain.$error.pattern" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error</span>
+                        Domain not valid
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="step-content row">
+            <div class="block-title">Country</div>
+            <div class="form-group col-md-10 col-md-offset-1">
+                <label for="reg_country" class="labelTextModal" >Country</label>
+                <select class="form-control" id="reg_country" required ng-model="reg.community.country" name="reg_country">
+                    <option ng-repeat="item in countryList" value="{{item.id}}">{{item.value}}</option>
+                </select>
+                <div ng-show="formStep3.$submitted || formStep3.reg_country.$touched">
+                    <div ng-show="formStep3.reg_country.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span>
+                        Insert a Country.
+                    </div>
+                </div>
+            </div>
+        </div>  
+            
+        <div class="step-content row">
+            <div class="block-title">Languages</div>
+            <div class="form-group col-md-10 col-md-offset-1">
+                <label for="reg_language_first" class="labelTextModal" >First Language</label>
+                <select class="form-control" id="reg_language_first" required ng-model="reg.community.language_first" name="reg_language_first">
+                    <option value="">Select the language</option>
+                    <option ng-repeat="item in languageList" value="{{item.id}}">{{item.name}}</option>
+                </select>
+                <div ng-show="formStep3.$submitted || formStep3.reg_language_first.$touched">
+                    <div ng-show="formStep3.reg_language_first.$error.required" class="alert alert-danger alert-wrong-field ng-hide alert-reg-field" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span>
+                        Insert a First Language.
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+            
+        <div class="form-group">
+            <div class="col-md-6 col-md-offset-3 col-sm-12 text-center next-step-container">
+                <button ng-disabled="formStep3.$invalid" type="submit" class="btn btn-next-step">Next Step &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                <!--<button ng-disabled="formStep3.$invalid || !reg.community.file" type="submit" class="btn btn-next-step">Next Step &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i></button>-->
+            </div>
+        </div>
+            
+    </form>
+        
+</div>

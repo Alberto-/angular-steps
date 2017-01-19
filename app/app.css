@@ -1,0 +1,974 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 19-ott-2016, 15.53.08
+    Author     : A.Piras
+
+*/
+
+html,
+body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+    /*font-family: "Raleway-Regular","Lato","Open Sans",Helvetica,Arial,sans-serif;*/
+    /*background: url(assets/img/city-bg2.jpg) fixed top center;*/
+
+    /*background: url(https://images.unsplash.com/photo-1436891735266-279891c58cdf?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=) fixed top center;*/
+    background: url(assets/img/paris-city.jpg) fixed top center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 14px;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.no-padding{
+    padding: 0 !important;
+}
+
+.home-card-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    color: #444141;
+    font-weight: bold;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.step2-icons{
+    font-size: 40px !important;
+    margin-top: 20px;
+}
+
+.service-anchor {
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.shadow-static {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.shadow {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all ease 0.2s;
+}
+
+.shadow:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.appTitle{
+    font-family: 'Gloria Hallelujah', cursive;
+    margin: 1em auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+.appSubTitle{
+    font-family: 'Gloria Hallelujah', cursive;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.reg-main-content{
+    position: relative;
+}
+
+#registrationApp{
+    min-height: 500px;
+}
+
+.default-view{
+    padding: 2em 0;
+}
+
+.bg-white{
+    background: #fff;
+    overflow: auto;
+
+}
+
+#currentView{
+    /*border-top: 2px solid #fff;*/
+    padding: 3em 0;
+    z-index: 100;
+}
+
+.next-step-container{
+    margin-top: 2em;
+}
+
+.margin-md-bottom{
+    margin-bottom: 1em;
+}
+
+.btn-next-step{
+    width: 100%;
+    font-size: 1em;
+    background-color: #d7655b;
+    background-image: none;
+    border:0;
+    color: #fff;
+    padding: 15px;
+}
+
+.btn-next-step:hover{
+    background-color: rgb(226, 157, 151);
+    background-image: none;
+}
+
+.form-control, output, .bootstrap-datepicker.form-control[readonly]{
+    font-size: 1em;
+    background: #dfd8d7;
+    border-radius: 2px;
+    height: 2em;
+    font-family: "Lato-Regular", "Lato","Open Sans",Helvetica,Arial,sans-serif;
+}
+
+.btn-reg-close-content{
+    padding: 0.5em 1em;
+    text-align: right;
+}
+
+.btn-reg-close-content button{
+    border: 0;
+    padding: 10px;
+    background: transparent;
+    outline: none;
+}
+
+/****** Buttons header  FLOW- Start******/
+
+#appSteps{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 52px;
+    margin-bottom: -25px;
+    z-index: 102;
+    position: relative;
+    align-items: stretch;
+    padding: 0;
+}
+
+#appSteps:before{
+    width: 100%;
+    content: "";
+    border-top: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    z-index: 101;
+}
+
+.item-step{
+    background-image: none;
+    background: #fafafa;
+    border: 2px solid #fafafa;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    line-height: 36px;
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 102;
+}
+
+.item-step:hover{
+    background: rgb(238, 185, 180)
+}
+
+
+.item-step:disabled:hover{
+    background: #fafafa;
+}
+
+
+.step-active{
+    border: 4px solid #d7655b;
+}
+
+
+/****** buttons header FLOW - End******/
+
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.company-box{
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+.company-box {
+    transition: all linear 0.5s;
+}
+.company-box.ng-hide {
+    opacity: 0;
+}
+
+.alert-reg-field{
+    background-color: rgba(255, 255, 255, 0.26);
+    color: #db3030;
+    padding: 5px 15px;
+    border: 0;
+}
+
+.reg-primary-button-inverted{
+    background: #fff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: #000000;
+    padding: 5px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.reg-primary-button{
+    background: #d7655b;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%;
+}
+
+/********************************************* STEP1 *************************************************/
+
+step1{
+    background: transparent;
+    color: #fff;
+}
+
+.has-error .control-label{
+    color: #fff;
+}
+
+/********************************************* STEP2 *************************************************/
+
+.step2-item{
+    background: rgba(182, 182, 182, 0.27);
+    padding: 1em;
+    padding-top: 0;
+
+}
+
+.step2-item-content{
+    min-height: 200px;
+    position: relative;
+    padding: 1em;
+    color: gray;
+    font-family: "Lato-Regular", "Lato","Open Sans",Helvetica,Arial,sans-serif;
+}
+
+.step-content{
+    background: rgba(158, 158, 158, 0.18);
+    padding: 4em;
+    border: 1px solid rgba(0, 0, 0, 0.29);
+    margin: 3em 0;
+    position: relative;
+}
+
+.step2-item-action{
+    text-align: center;
+    font-size: 40px;
+}
+
+.step2-icon-container{
+    color:  #d7655b;
+    font-size: 2em;
+    text-align: center;
+    padding: 0.2em 0;
+}
+
+.service-anchor{
+    outline: none;
+    position: relative;
+}
+
+.service-anchor:link,
+.service-anchor:visited,
+.service-anchor:hover,
+.service-anchor:focus,
+.service-anchor:active{
+    text-decoration: none;
+}
+
+.step2-item-action input[type=radio]:checked + label>i:before{
+    content: "\f058";
+}
+
+.step2-item-action input[type=radio] + label>i:before{
+    content: "\f10c";
+}
+
+.step2-item-action input[type=radio]{
+    display: none;
+}
+
+.step2-title{
+    text-align: left;
+    display: inline;
+    color: #d7655b;
+    font-size: 2em;
+    position: relative;
+    padding: 0 1.5em;
+}
+
+.step2-title:before{
+    border-top: 2px solid #d7655b;
+    width: 40px;
+    height: 0;
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+}
+
+.step2-title:after{
+    border-top: 2px solid #d7655b;
+    width: 40px;
+    height: 0;
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    right: 0px;
+}
+
+#service1{
+    height: 200px;
+    background:  url(assets/img/service1a.jpg)no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#service2{
+    height: 200px;
+    background: url(assets/img/service2a.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#service3{
+    height: 200px;
+    background: url(assets/img/service3a.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.step2-img-text{
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.step2-icon{
+    color: #d7655b;
+}
+
+/*********************************************************  STEP 3 ******************************************/
+
+.imgSizePreview{
+    max-width: 200px;
+}
+
+
+#uploadLogoButton{
+    margin-top: 3em;
+}
+
+
+#reg_domain{
+    width: 50%;
+    display: inline;
+}
+
+#domainEnd{
+    display: inline;
+}
+
+step3{
+    background: transparent;
+    color: #000000;
+}
+
+.step-content{
+    background: rgb(235, 235, 235);
+    padding: 4em;
+    border: 1px solid rgba(0, 0, 0, 0.29);
+    margin: 3em 0;
+    position: relative;
+}
+
+.step-content .block-title{
+    position: absolute;
+    font-size: 1.6em;
+    background: #ffffff;
+    line-height: 1.1em;
+    /*top: -1.1em;*/
+    top: -24px;
+    left: 0.5em;
+}
+
+step3 .form-control, output, step3{
+    background: transparent;
+}
+
+.step3-title{
+    text-align: left;
+    display: inline;
+    color: #d7655b;
+    font-size: 2em;
+    position: relative;
+    padding: 0 1.5em;
+}
+
+.step3-title:before{
+    border-top: 2px solid #d7655b;
+    width: 40px;
+    height: 0;
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+}
+
+.step3-title:after{
+    border-top: 2px solid #d7655b;
+    width: 40px;
+    height: 0;
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    right: 0px;
+}
+
+
+
+.file-info{
+    font-size: 0.8em;
+}
+
+/*********************************************************  STEP 4 ******************************************/
+.step4-item-title{
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #464646;
+    font-weight: 600;
+    padding-top: 0.4em;
+    position:relative;
+    margin-bottom: 0.2em;
+    display: block;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+.step4-item-title:after{
+    height: 3px !important;
+    width: 2em;
+    content: "";
+    background: rgba(154, 154, 154, 0.33);
+    margin: auto;
+    display: block;
+    margin-top: 5px;
+}
+
+.step4-price{
+    color: #000000;
+}
+
+.step4-price-amount{
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.step4-price-descr{
+    font-family: "DancingScript","Lato-Regular","Open Sans",Helvetica,Arial,sans-serif;
+    text-align: center;
+    font-size: 2em;
+}
+
+
+.step4-price-amount span.price{
+    font-weight: bold;
+}
+
+/*MOST POPULAR SECTION- Ribbon*/
+
+.most-popular-container {
+    position: relative;
+}
+
+.most-popular-container .ribbon {
+    position: absolute;
+    left: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+}
+
+.most-popular-container .ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#D7655B 0%, #d7655b 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -21px;
+}
+
+.most-popular-container .ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #d7655b;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #d7655b;
+}
+
+.most-popular-container .ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #d7655b;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #d7655b;
+}
+
+/*MOST POPULAR SECTION- Ribbon*/
+
+.most-popular-container2 {
+    position: relative;
+}
+
+.most-popular-container2 .ribbon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px;
+    height: 92px;
+    text-align: right;
+}
+
+.most-popular-container2 .ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 81px;
+    ransform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#D7655B 0%, #d7655b 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    height: 57px;
+    position: absolute;
+    top: -12px;
+    left: -34px;
+}
+
+/*********************************************************  STEP 5 ******************************************/
+
+.icon-service-step5{
+    color: gray;
+    font-size: 3em;
+}
+
+.card-inline{
+    display: inline-block;
+    width: 50px;
+    height: auto;
+}
+
+.card-title{
+    display: block;
+    margin-bottom: 2em;
+    font-size: 1.5em;
+}
+
+input[type=radio].card-radio{
+    border: 0px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+label{
+    cursor: pointer;
+}
+
+.old-b-row{
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+#askmoreBlock{
+    padding: 3em 0;
+    margin-top: 2em;
+}
+
+.response-button{
+    width: 30%;
+    display: block;
+    margin: 5em auto;
+    text-align: center;
+}
+
+/*------------SERVICES--------------------------------*/
+
+.step2-item{
+    background: rgb(235, 235, 235);
+    /*border: 2px solid rgba(128, 128, 128, 0.49);*/
+    padding: 1em;
+    padding-top: 0;
+
+}
+
+.step2-item-content{
+    height: 230px;
+    position: relative;
+    padding: 1em;
+    color: gray;
+    font-family: "Lato-Regular", "Lato","Open Sans",Helvetica,Arial,sans-serif;
+}
+
+
+.step2-item-action{
+    text-align: center;
+    font-size: 40px;
+}
+
+.step2-icon-container{
+    color:  #d7655b;
+    font-size: 2em;
+    text-align: center;
+    padding: 0.2em 0;
+}
+
+.service-anchor{
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.service-anchor:link,
+.service-anchor:visited,
+.service-anchor:hover,
+.service-anchor:focus,
+.service-anchor:active{
+    text-decoration: none;
+}
+
+.step2-item-action input[type=radio]:checked + label>i:before{
+    content: "\f058";
+}
+
+.step2-item-action input[type=radio] + label>i:before{
+    content: "\f10c";
+}
+
+.step2-item-action input[type=radio]{
+    display: none;
+}
+
+.step2-title{
+    text-align: left;
+    display: inline;
+    color: #d7655b;
+    font-size: 2em;
+    position: relative;
+    padding: 0 1.5em;
+}
+
+.step2-title:before{
+    border-top: 2px solid #d7655b;
+    width: 40px;
+    height: 0;
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+}
+
+.step2-title:after{
+    border-top: 2px solid #d7655b;
+    width: 40px;
+    height: 0;
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    right: 0px;
+}
+
+.step2-img-text{
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.step2-icon{
+    color: #d7655b;
+}
+
+.home-card-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    color: #444141;
+    font-weight: bold;
+}
+
+.home-icon{
+    font-size: 1em;
+}
+
+/*--------------------------PRICING--------------------------------------*/
+
+.step4-item-title{
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #464646;
+    font-weight: 600;
+    padding-top: 0.4em;
+    position:relative;
+    margin-bottom: 0.2em;
+    display: block;
+
+}
+
+.step4-item-title:after{
+    height: 3px !important;
+    width: 2em;
+    content: "";
+    background: rgba(154, 154, 154, 0.33);
+    margin: auto;
+    display: block;
+    margin-top: 5px;
+}
+
+.step4-price{
+    color: #000000;
+}
+
+.step4-price-amount{
+    font-size: 2em;
+    text-align: center;
+}
+
+.step4-price-descr{
+    font-family: "DancingScript","Lato-Regular","Open Sans",Helvetica,Arial,sans-serif;
+    text-align: center;
+    font-size: 2em;
+}
+
+.step4-price-amount span.price{
+    font-weight: bold;
+}
+
+/*MOST POPULAR SECTION- Ribbon*/
+
+.most-popular-container {
+    position: relative;
+}
+
+.most-popular-container .ribbon {
+    position: absolute;
+    left: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+}
+
+.most-popular-container .ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#D7655B 0%, #d7655b 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -21px;
+}
+
+.most-popular-container .ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #d7655b;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #d7655b;
+}
+
+.most-popular-container .ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #d7655b;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #d7655b;
+}
+
+/*--------------sign up section------------------------------------*/
+
+.home-reg-primary-button{
+    background: #d7655b;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%;
+    padding: 16px;
+    margin: 5em auto;
+    text-align: center;
+}
+
+.white-link:link,
+.white-link:visited,
+.white-link:hover,
+.white-link:focus,
+.white-link:active{
+    text-decoration: none;
+    color: #fff;
+}
+
+.black-link:link,
+.black-link:visited,
+.black-link:hover,
+.black-link:focus,
+.black-link:active{
+    text-decoration: none;
+    color: #000000;
+}
+
+.response-button{
+    width: 30%;
+    display: block;
+    margin: 5em auto;
+    text-align: center;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+#loadingSpinner{
+    position: absolute !important;
+    width: 100% !important;
+    background-color: rgba(255, 255, 255, 0.37);
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    padding-top: 20em;
+    text-align: center !important;
+    display: none;
+    z-index: 999;
+}
+
+.input-height{
+    height: 32px !important;
+}
+
+.margin-medium-left{
+    margin-left: 2em;
+}
+
+.padding-medium-left{
+    padding-left: 2em;
+}
+
+.left{
+    float:  left !important;
+}
+
+.right{
+    float: right !important;
+}
+
+tbody>tr>td,thead>tr>th{
+    text-align: center;
+}
+
+.itemActive{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
