@@ -39,11 +39,11 @@
 </head>
 
 <body>
-	<h1 class="appTitle">Angular-Steps Demo</h1>
-	<div id="stepsApp"  ng-app="stepsApp" >
+<h1 class="appTitle">Angular-Steps Demo</h1>
+<div id="stepsApp"  ng-app="stepsApp" >
 	<div class="row" ng-controller="stepsController">
 		<div class="reg-header">
-		<h3 class="appSubTitle">Try this registration wizard</h3>
+			<h3 class="appSubTitle">Try this registration wizard</h3>
 		</div>
 
 		<div class="col-md-12 col-sm-12 main-app-content section-spacer no-padding ">
@@ -52,11 +52,21 @@
 				<div class="reg-main-content" >
 
 					<div id="appSteps" class="col-md-6 col-md-offset-3">
-						<button class="item-step" ng-click="moveToStep(1)" ng-class="{'step-active' : currentStep === 1}" ng-disabled="!reg.steps[1]">1</button>
-						<button class="item-step" ng-click="moveToStep(2)" ng-class="{'step-active' : currentStep === 2}" ng-disabled="!reg.steps[2]">2</button>
-						<button class="item-step" ng-click="moveToStep(3)" ng-class="{'step-active' : currentStep === 3}" ng-disabled="!reg.steps[3]">3</button>
-						<button class="item-step" ng-click="moveToStep(4)" ng-class="{'step-active' : currentStep === 4}" ng-disabled="!reg.steps[4]">4</button>
-						<button class="item-step" ng-click="moveToStep(5)" ng-class="{'step-active' : currentStep === 5}" ng-disabled="!reg.steps[5]">5</button>
+						<div class="item-content">
+							<button class="item-step" ng-click="moveToStep(1)" ng-class="{'step-active' : currentStep === 1}" ng-disabled="!reg.steps[1]">1</button>
+						</div>
+						<div class="item-content">
+							<button class="item-step" ng-click="moveToStep(2)" ng-class="{'step-active' : currentStep === 2}" ng-disabled="!reg.steps[2]">2</button>
+						</div>
+						<div class="item-content">
+							<button class="item-step" ng-click="moveToStep(3)" ng-class="{'step-active' : currentStep === 3}" ng-disabled="!reg.steps[3]">3</button>
+						</div>
+						<div class="item-content">
+							<button class="item-step" ng-click="moveToStep(4)" ng-class="{'step-active' : currentStep === 4}" ng-disabled="!reg.steps[4]">4</button>
+						</div>
+						<div class="item-content">
+							<button class="item-step" ng-click="moveToStep(5)" ng-class="{'step-active' : currentStep === 5}" ng-disabled="!reg.steps[5]">5</button>
+						</div>
 					</div>
 
 					<!---Current Step: {{currentStep}}--->
@@ -84,7 +94,7 @@
 			</div>
 		</div>
 	</div>
-	</div>
+</div>
 
 </body>
 </html>
