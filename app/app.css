@@ -12,19 +12,24 @@ and open the template in the editor.
 html,
 body {
     height: 100%;
-    /* The html and body elements cannot have any padding or margin. */
-    /*font-family: "Raleway-Regular","Lato","Open Sans",Helvetica,Arial,sans-serif;*/
-    /*background: url(assets/img/city-bg2.jpg) fixed top center;*/
-
-    /*background: url(https://images.unsplash.com/photo-1436891735266-279891c58cdf?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=) fixed top center;*/
-    background: url(assets/img/paris-city.jpg) fixed top center;
-
+    /* the html and body elements cannot have any padding or margin. */
+    background: url(assets/img/paris-city.jpg)  no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-size: 14px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
 }
+
+@media(max-width:767px){
+    .appSubTitle{
+        color:white;
+    }
+
+}
+
 
 .row {
     margin-left: 0 !important;
@@ -151,24 +156,30 @@ body {
 /****** Buttons header  FLOW- Start******/
 
 #appSteps{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
     height: 52px;
     margin-bottom: -25px;
-    z-index: 102;
-    position: relative;
-    align-items: stretch;
+    z-index: 101;
     padding: 0;
+    /*display: flex;*/
+    /*flex-flow: row wrap;*/
+    /*justify-content: space-between;*/
+    /*flex-direction:row;*/
+    /*align-content:space-between;*/
+    /*align-items: center;*/
+    /*display: flex;*/
+    /*flex-flow: row wrap;*/
+    /*justify-content: space-around;*/
+    position: relative;
 }
 
 #appSteps:before{
-    width: 100%;
+    width: 80%;
     content: "";
     border-top: 2px solid #fff;
     position: absolute;
-    top: 50%;
-    z-index: 101;
+    top: 56%;
+    z-index: -10;
+    margin-left: 10%;
 }
 
 .item-step{
@@ -180,12 +191,19 @@ body {
     height: 60px;
     border-radius: 50px;
     line-height: 36px;
-    text-align: center;
     outline: none;
     font-size: 20px;
     font-weight: bold;
     z-index: 102;
+    text-align: center;
 }
+
+.item-content{
+    width: 19%;
+    display: inline-block;
+    text-align: center;
+}
+
 
 .item-step:hover{
     background: rgb(238, 185, 180)
