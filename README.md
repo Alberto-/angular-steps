@@ -60,4 +60,4 @@ Angular Steps will run on http://localhost:5000/app
 
 MIT
 
-[view demo]: <http://angularsteps-enta.rhcloud.com/app/>
+[view demo]: <https://albertopiras.github.io/angular-steps/>
