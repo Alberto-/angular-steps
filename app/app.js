@@ -50,35 +50,35 @@ registrationApp.config(function ($httpProvider) {
 
 registrationApp.directive('step1', function() {
   return {
-    templateUrl:  CurrentHost.getPortal() + '/views/step1.html',
+    templateUrl:  CurrentHost.getPortal() + '/app/views/step1.html',
     controller:"step1Controller"
   };
 });
 
 registrationApp.directive('step2', function() {
   return {
-    templateUrl:  CurrentHost.getPortal() + '/views/step2.html',
+    templateUrl:  CurrentHost.getPortal() + '/app/views/step2.html',
      controller:"step2Controller"
   };
 });
 
 registrationApp.directive("step3", function(){
    return{
-    templateUrl:  CurrentHost.getPortal() + '/views/step3.html',
+    templateUrl:  CurrentHost.getPortal() + '/app/views/step3.html',
         controller:"step3Controller"
    };
 });
 
 registrationApp.directive("step4", function(){
    return{
-    templateUrl:  CurrentHost.getPortal() + '/views/step4.html',
+    templateUrl:  CurrentHost.getPortal() + '/app/views/step4.html',
         controller:"step4Controller"
    };
 });
 
 registrationApp.directive("step5", function(){
    return{
-    templateUrl:  CurrentHost.getPortal() + '/views/step5.html',
+    templateUrl:  CurrentHost.getPortal() + '/app/views/step5.html',
     controller:"step5Controller"
    };
 });

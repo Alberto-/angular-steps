@@ -5,36 +5,40 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Angular steps</title>
+	<meta name="description" content="Angular Steps is an example of a registration step wizard made with AngularJS ">
+	<meta name="keywords" content="Angularjs, Angular wizard, angular step, angular flow, JavaScript">
+	<meta name="author" content="Alberto Piras">
+	<meta name="contact" content="a.piras.ict@gmail.com">
 
 	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
 	<!-- JS Libs inclusions -->
-	<script type="text/javascript" src="assets/bower_components/angular/angular.min.js"></script>
-	<script type="text/javascript" src="assets/bower_components/angular-animate/angular-animate.min.js"></script>
+	<script type="text/javascript" src="./app/assets/bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="./app/assets/bower_components/angular-animate/angular-animate.min.js"></script>
 
 	<!-- element app -->
-	<script type="text/javascript" src="app.js"></script>
-	<script type="text/javascript" src="services/service.js"></script>
-	<script type="text/javascript" src="controllers/registrationController.js"></script>
-	<script type="text/javascript" src="controllers/step1Controller.js"></script>
-	<script type="text/javascript" src="controllers/step2Controller.js"></script>
-	<script type="text/javascript" src="controllers/step3Controller.js"></script>
-	<script type="text/javascript" src="controllers/step4Controller.js"></script>
-	<script type="text/javascript" src="controllers/step5Controller.js"></script>
+	<script type="text/javascript" src="./app/app.js"></script>
+	<script type="text/javascript" src="./app/services/service.js"></script>
+	<script type="text/javascript" src="./app/controllers/registrationController.js"></script>
+	<script type="text/javascript" src="./app/controllers/step1Controller.js"></script>
+	<script type="text/javascript" src="./app/controllers/step2Controller.js"></script>
+	<script type="text/javascript" src="./app/controllers/step3Controller.js"></script>
+	<script type="text/javascript" src="./app/controllers/step4Controller.js"></script>
+	<script type="text/javascript" src="./app/controllers/step5Controller.js"></script>
 
-	<link rel="stylesheet" href="app.css">
+	<link rel="stylesheet" href="./app/app.css">
 
 	<!-- Bootstrap -->
-	<script type="text/javascript" src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="./app/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./app/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
 
 	<!--Google fonts & icons-->
 	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 	<!--font Awesome-->
-	<link href="assets/bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="./app/assets/bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
 
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
@@ -71,7 +75,7 @@
 						</div>
 					</div>
 
-					<!---Current Step: {{currentStep}}--->
+					<!---Current Step: {{currentStep}}-->
 					<div ng-switch="currentSelected" class="col-md-12" id="currentView" >
 						<div ng-switch-when="1" class="default-view">
 							<step1></step1>
